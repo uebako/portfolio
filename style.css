@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+:root {
+  --illumination-font: "Patrick Hand", sans-serif;
+  --sub-font: "Zen Maru Gothic", sans-serif;
+  --white: #f9f6f1;
+  --blue: #5f7f95;
+  --brown: #7a6256;
+  --yellow: #e0b44c;
+  --purple: #9a8fa6;
+  --BG: #e2dddd;
+}
+
+body {
+  background-color: var(--BG);
+  background-image: url("./img/mat.png"), url("./img/bed.png");
+  background-repeat: no-repeat;
+  background-size: 80%, 25%;
+  background-attachment: fixed;
+  background-position:
+    50% 110%,
+    5% 10%;
+}
+
+header {
+  position: relative;
+}
+
+.ceiling {
+  height: 5vh;
+  background-color: var(--brown);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 0 5vw 0;
+  margin-top: -15px;
+}
+
+nav li {
+  position: relative;
+}
+
+nav li a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+nav ul p {
+  font-size: 3vw;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-family: var(--illumination-font);
+}
+
+.illumination {
+  width: 15vw;
+  position: relative;
+}
+
+.profile-illumination {
+  top: 65%;
+  left: 45%;
+}
+
+.works-illumination {
+  top: 60%;
+  left: 45%;
+}
+
+.contact-illumination {
+  top: 58%;
+  left: 50%;
+}
