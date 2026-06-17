@@ -2,7 +2,8 @@
 
 :root {
   --illumination-font: "Patrick Hand", sans-serif;
-  --sub-font: "Zen Maru Gothic", sans-serif;
+  --main-font: "Baloo 2", sans-serif;
+  --title-font: "Fredoka", sans-serif;
   --white: #f9f6f1;
   --blue: #5f7f95;
   --brown: #7a6256;
@@ -11,17 +12,23 @@
   --BG: #e2dddd;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--BG);
   background-image: url("./img/mat.png"), url("./img/bed.png");
   background-repeat: no-repeat;
-  background-size: 80%, 25%;
-  background-attachment: fixed;
+  background-size: 80%, 20%;
+  background-attachment: scroll, fixed;
   background-position:
-    50% 110%,
-    5% 10%;
+    50% 70vh,
+    3% 10%;
 }
 
+/* ヘッダー */
 header {
   position: relative;
 }
@@ -35,7 +42,7 @@ nav ul {
   display: flex;
   justify-content: space-evenly;
   list-style: none;
-  margin: 0 5vw 0;
+  margin: 0 15vw 0;
   margin-top: -15px;
 }
 
@@ -54,6 +61,7 @@ nav ul p {
   position: absolute;
   transform: translate(-50%, -50%);
   font-family: var(--illumination-font);
+  color: var(--white);
 }
 
 .illumination {
@@ -74,4 +82,111 @@ nav ul p {
 .contact-illumination {
   top: 58%;
   left: 50%;
+}
+
+/* その他のボタン */
+
+.other-button {
+  position: relative;
+  min-height: 70vh;
+}
+
+/* 左のソファー */
+.topic-button {
+  position: absolute;
+  top: 15%;
+  left: 8%;
+}
+
+.topic-button img {
+  width: 28vw;
+}
+
+.topic-button p {
+  font-size: 2vw;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-family: var(--main-font);
+  color: var(--white);
+  top: 30%;
+  left: 40%;
+}
+
+/* 右のソファー */
+.instagram-button {
+  position: absolute;
+  top: 15%;
+  right: 8%;
+}
+
+.instagram-button img {
+  width: 28vw;
+}
+
+.instagram-button p {
+  font-size: 2vw;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-family: var(--main-font);
+  color: var(--white);
+  top: 30%;
+  left: 60%;
+}
+
+/* 中央のデスク */
+.desk-button {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+}
+
+.desk-button img {
+  width: 45vw;
+}
+
+.desk-button p {
+  font-size: 4vw;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-family: var(--title-font);
+  color: var(--white);
+  top: 20%;
+  left: 50%;
+}
+
+/* 自分 */
+.my-button {
+  position: absolute;
+  top: -35%;
+  right: -5%;
+}
+
+.my-button img {
+  width: 20vw;
+  transform: rotate(-45deg);
+}
+
+/* オレ */
+.ore-button {
+  position: absolute;
+  top: 10%;
+  right: 13%;
+}
+
+.ore-button img {
+  width: 12vw;
+}
+
+/* ラテ */
+.latte-button {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+}
+
+.latte-button img {
+  width: 15vw;
 }
