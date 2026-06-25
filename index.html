@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Fredoka:wght@400;700&family=Kosugi+Maru&family=Patrick+Hand&display=swap"
       rel="stylesheet"
     />
     <title>UEBAKO portfolio</title>
@@ -16,26 +16,35 @@
   <body>
     <header>
       <div class="ceiling"></div>
-      <nav>
+      <nav aria-label="メインメニュー">
         <ul>
-          <li>
-            <button>
-              <img src="./img/profile.png" alt="profile" class="illumination" />
-              <p class="profile-illumination">PROFILE</p>
+          <li class="lamp-item">
+            <button type="button" id="profile-open" aria-label="プロフィールを開く">
+              <img src="./img/profile.png" alt="" class="illumination" />
+              <span class="profile-illumination">PROFILE</span>
+
+              <!-- 光 -->
+              <div id="profile-light" class="lamp-light"></div>
             </button>
           </li>
 
-          <li>
-            <button>
-              <img src="./img/works.png" alt="works" class="illumination" />
-              <p class="works-illumination">WORKS</p>
+          <li class="lamp-item">
+            <button type="button" id="works-open" aria-label="ワークを開く">
+              <img src="./img/works.png" alt="" class="illumination" />
+              <span class="works-illumination">WORKS</span>
+
+              <!-- 光 -->
+              <div id="works-light" class="lamp-light"></div>
             </button>
           </li>
 
-          <li>
-            <button>
-              <img src="./img/contact.png" alt="contact" class="illumination" />
-              <p class="contact-illumination">CONTACT</p>
+          <li class="lamp-item">
+            <button type="button" id="contact-open" aria-label="コンタクトを開く">
+              <img src="./img/contact.png" alt="" class="illumination" />
+              <span class="contact-illumination">CONTACT</span>
+
+              <!-- 光 -->
+              <div id="contact-light" class="lamp-light"></div>
             </button>
           </li>
         </ul>
@@ -43,44 +52,100 @@
     </header>
 
     <main>
-      <section class="other-button">
-        <button class="topic-button">
-          <img src="./img/l-sofa.png" alt="topic" />
-          <p>TOPIC</p>
+      <section class="hero-scene">
+        <div class="cat-bed"><img src="./img/bed.png" alt="" /></div>
+        <div class="mat"><img src="./img/mat.png" alt="" /></div>
+
+        <button type="button" class="topic-button" aria-label="トピックを開く">
+          <img src="./img/l-sofa.png" alt="" />
+          <span>TOPIC</span>
         </button>
 
-        <button class="instagram-button">
-          <img src="./img/r-sofa.png" alt="topic" />
-          <p>Instagram</p>
+        <button type="button" class="instagram-button" aria-label="Instagramを開く">
+          <img src="./img/r-sofa.png" alt="" />
+          <span>Instagram</span>
         </button>
 
-        <button class="desk-button">
-          <img src="./img/desk.png" alt="uebako" />
-          <p>UEBAKO</p>
+        <button type="button" class="desk-button" aria-label="プロフィールを開く">
+          <img src="./img/desk.png" alt="" />
+          <span>UEBAKO</span>
         </button>
 
-        <button class="my-button">
+        <button type="button" class="profile-character" aria-label="ホビーを開く">
           <img src="./img/uebako.png" alt="uebako" />
         </button>
 
-        <button class="ore-button">
-          <img src="./img/ore.png" alt="ore" />
+        <button type="button" class="cat-ore-button" aria-label="猫紹介を開く">
+          <img src="./img/ore.png" alt="cat" />
         </button>
 
-        <button class="latte-button">
-          <img src="./img/latte.png" alt="latte" />
+        <button type="button" class="cat-latte-button" aria-label="猫紹介を開く">
+          <img src="./img/latte.png" alt="cat" />
         </button>
       </section>
     </main>
 
     <!-- PROFILE -->
-    <div id="profile-modal" class="panel hidden">
-      <p></p>
-    </div>
+    <section id="profile-modal" class="panel hidden" aria-hidden="true">
+      <!-- 暗い背景（クリックで閉じる）-->
+      <div class="panel-overlay"></div>
+      <!-- 本体 -->
+      <div class="panel-content panel-profile">
+        <div class="panel-profile-inner">
+          <button type="button" id="profile-close" class="close-button" aria-label="閉じる">×</button>
+          <h2>UEBAKO(上羽子)</h2>
+          <p>
+            UEBAKOは、親しみやすく印象に残ることと、きちんと使いやすいことを大切にしたWebデザインを制作しています。<br />
+            情報の伝わりやすさや操作のしやすさを意識しながら、イラストや手書きの要素を取り入れた、少し遊び心のあるデザインが得意です。<br />
+            サイトを見る人の気持ちや、動線を考えながら、丁寧にデザインしています。<br />
+            ふんわりしたイメージの段階からでも、お気軽にご相談ください。
+          </p>
+          <h3>Skills</h3>
+          <ul>
+            <li>HTML / CSS / TypeScript</li>
+            <li>Figma(Webデザイン)</li>
+            <li>Procreate(イラスト作成)</li>
+          </ul>
+        </div>
+        <div class="profile-icon"><img src="./img/uebako.png" alt="アイコン" /></div>
+      </div>
+    </section>
+
     <!-- WORKS -->
-    <div id="works-modal" class="panel hidden">...</div>
+    <section id="works-modal" class="panel hidden" aria-hidden="true">
+      <!-- 暗い背景（クリックで閉じる）-->
+      <div class="panel-overlay"></div>
+      <!-- 本体 -->
+      <div class="panel-content panel-works">
+        <div class="panel-works-inner">
+          <button type="button" id="works-close" class="close-button" aria-label="閉じる">×</button>
+          <button type="button" class="photo-flame work1" aria-label="作品1">
+            <img src="./img/work1.png" alt="work#1" />
+            <span>2025.11</span>
+          </button>
+          <button type="button" class="photo-flame work2" aria-label="作品2">
+            <img src="./img/work2.png" alt="work#2" />
+            <span>2024.04</span>
+          </button>
+          <button type="button" class="photo-flame work3" aria-label="作品3">
+            <img src="./img/work3.png" alt="work3" />
+            <span>2025.09</span>
+          </button>
+        </div>
+      </div>
+    </section>
 
     <!-- CONTACT -->
-    <div id="contact-modal" class="panel hidden">...</div>
+    <section id="contact-modal" class="panel hidden" aria-hidden="true">
+      <!-- 暗い背景（クリックで閉じる）-->
+      <div class="panel-overlay"></div>
+      <!-- 本体 -->
+      <div class="panel-content">
+        <h2></h2>
+        <p>a</p>
+      </div>
+    </section>
+
+    <script type="module" src="./src/main.ts"></script>
   </body>
 </html>
