@@ -16,6 +16,9 @@
   <body>
     <header>
       <div class="ceiling"></div>
+    </header>
+
+    <main>
       <nav aria-label="メインメニュー">
         <ul>
           <li class="lamp-item">
@@ -49,102 +52,641 @@
           </li>
         </ul>
       </nav>
-    </header>
-
-    <main>
       <section class="hero-scene">
         <div class="cat-bed"><img src="./img/bed.png" alt="" /></div>
         <div class="mat"><img src="./img/mat.png" alt="" /></div>
 
-        <button type="button" class="topic-button" aria-label="トピックを開く">
+        <button type="button" id="topic-open" class="topic-button" aria-label="トピックを開く">
           <img src="./img/l-sofa.png" alt="" />
           <span>TOPIC</span>
         </button>
 
-        <button type="button" class="instagram-button" aria-label="Instagramを開く">
-          <img src="./img/r-sofa.png" alt="" />
-          <span>Instagram</span>
-        </button>
+        <a
+          href="https://www.instagram.com/curuttagirl?igsh=MTMzemVvbjV5NWp1OA%3D%3D&utm_source=qr"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="instagram-button"
+        >
+          <img src="./img/r-sofa.png" alt="" /> <span>Instagram</span></a
+        >
 
-        <button type="button" class="desk-button" aria-label="プロフィールを開く">
-          <img src="./img/desk.png" alt="" />
+        <button type="button" id="menu-open" class="menu-button" aria-label="プロフィールを開く">
+          <img src="./img/desk.png" alt="menu" />
           <span>UEBAKO</span>
         </button>
 
-        <button type="button" class="profile-character" aria-label="ホビーを開く">
+        <button type="button" id="likes-open" class="profile-character" aria-label="好きなものを開く">
           <img src="./img/uebako.png" alt="uebako" />
         </button>
 
-        <button type="button" class="cat-ore-button" aria-label="猫紹介を開く">
-          <img src="./img/ore.png" alt="cat" />
+        <button type="button" id="cat-ore-open" class="cat-ore-button" aria-label="猫紹介を開く">
+          <img id="ore-button-image" src="./img/ore1.png" alt="cat" />
         </button>
 
-        <button type="button" class="cat-latte-button" aria-label="猫紹介を開く">
-          <img src="./img/latte.png" alt="cat" />
+        <button type="button" id="cat-latte-open" class="cat-latte-button" aria-label="猫紹介を開く">
+          <img id="latte-button-image" src="./img/latte1.png" alt="cat" />
         </button>
       </section>
-    </main>
 
-    <!-- PROFILE -->
-    <section id="profile-modal" class="panel hidden" aria-hidden="true">
-      <!-- 暗い背景（クリックで閉じる）-->
-      <div class="panel-overlay"></div>
-      <!-- 本体 -->
-      <div class="panel-content panel-profile">
-        <div class="panel-profile-inner">
-          <button type="button" id="profile-close" class="close-button" aria-label="閉じる">×</button>
-          <h2>UEBAKO(上羽子)</h2>
-          <p>
-            UEBAKOは、親しみやすく印象に残ることと、きちんと使いやすいことを大切にしたWebデザインを制作しています。<br />
-            情報の伝わりやすさや操作のしやすさを意識しながら、イラストや手書きの要素を取り入れた、少し遊び心のあるデザインが得意です。<br />
-            サイトを見る人の気持ちや、動線を考えながら、丁寧にデザインしています。<br />
-            ふんわりしたイメージの段階からでも、お気軽にご相談ください。
-          </p>
-          <h3>Skills</h3>
+      <!-- PROFILE -->
+      <section id="profile-modal" class="panel hidden" aria-hidden="true">
+        <!-- 暗い背景（クリックで閉じる）-->
+        <div class="panel-overlay"></div>
+        <!-- 本体 -->
+        <div class="panel-content panel-profile">
+          <div class="panel-profile-inner">
+            <button type="button" id="profile-close" class="close-button" aria-label="閉じる">×</button>
+            <h2>UEBAKO(上羽子)</h2>
+            <p>
+              UEBAKOは、親しみやすく印象に残ることと、きちんと使いやすいことを大切にしたWebデザインを制作しています。<br />
+              情報の伝わりやすさや操作のしやすさを意識しながら、イラストや手書きの要素を取り入れた、少し遊び心のあるデザインが得意です。<br />
+              サイトを見る人の気持ちや、動線を考えながら、丁寧にデザインしています。<br />
+              ふんわりしたイメージの段階からでも、お気軽にご相談ください。
+            </p>
+            <h3>Skills</h3>
+            <ul>
+              <li>HTML / CSS / TypeScript</li>
+              <li>Figma(Webデザイン)</li>
+              <li>Procreate(イラスト作成)</li>
+            </ul>
+          </div>
+          <div class="profile-icon"><img src="./img/uebako.png" alt="アイコン" /></div>
+        </div>
+      </section>
+
+      <!-- WORKS -->
+      <section id="works-modal" class="panel hidden" aria-hidden="true">
+        <!-- 暗い背景（クリックで閉じる）-->
+        <div class="panel-overlay"></div>
+        <!-- 本体 -->
+        <div class="panel-content panel-works">
+          <div class="panel-works-inner">
+            <button type="button" id="works-close" class="close-button works-close" aria-label="閉じる">×</button>
+            <!-- 1.鴨川デルタどうぶつ日和 -->
+            <div class="photo-frame work1">
+              <div class="frame-inner">
+                <!-- 表 -->
+                <div class="frame-front">
+                  <button type="button" class="photo-button" aria-label="作品1">
+                    <img src="./img/work1.png" alt="work#1" />
+
+                    <div class="work-caption">
+                      <div class="tags">
+                        <p>#Web</p>
+                        <p>#illustrate</p>
+                        <p>#Festival</p>
+                      </div>
+                    </div>
+                  </button>
+
+                  <!-- フレーム下部 -->
+                  <div class="frame-info">
+                    <div class="view-text">
+                      Web Design<br />
+                      View →
+                    </div>
+
+                    <span>2025.11</span>
+                  </div>
+                </div>
+
+                <!-- 裏 -->
+                <div class="frame-back">
+                  <div class="frame-back-title">
+                    <img src="./img/works1-main-title.png" alt="" />
+                    <h3>（架空作品）</h3>
+                  </div>
+                  <div class="frame-back-top">
+                    <img src="./img/Group 1.png" alt="" />
+                  </div>
+                  <div class="frame-back-overview">
+                    <h4>概要</h4>
+                    <div class="frame-back-content">
+                      <p>
+                        　京都市・鴨川デルタで開催される架空の動物ふれあいフェスを想定し、イベントの魅力を伝えるWebサイトを制作しました。
+                      </p>
+                    </div>
+
+                    <h4>制作情報</h4>
+                    <div class="frame-back-content">
+                      <p>作成期間：1.5ヶ月</p>
+                      <p>使用ツール：Figma / Procreate</p>
+                      <p>使用技術：HTML / CSS</p>
+                    </div>
+                  </div>
+
+                  <div class="frame-back-concept">
+                    <h4>コンセプト</h4>
+                    <div class="frame-back-content">
+                      <p>
+                        　大人から子どもまで幅広い世代が楽しめる動物ふれあいフェスを想定し、必要な情報を分かりやすくまとめるとともに、子どもも見て楽しめる親しみやすいデザインを目指しました。
+                      </p>
+                    </div>
+                    <h4>サイトの狙い</h4>
+                    <div class="frame-back-content">
+                      <p>
+                        　イベントの魅力を伝え、チケットの購入につなげることを目的として制作しました。
+                        また、大人も子どもも楽しめるイベントであることが伝わるよう、明るく楽しい雰囲気のデザインを意識しました。
+                        さらに、子どもでも読みやすいよう、主要な見出しはひらがな表記にし、できるだけ簡単な言葉を使用しています。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="frame-back-concept-img">
+                    <img src="./img/consept.png" alt="" />
+                  </div>
+
+                  <div>
+                    <h4>工夫したポイント</h4>
+                    <ul class="frame-back-ingenuity">
+                      <div class="ingenuity ingenuity-1">
+                        <img src="./img/drink.png" alt="" />
+                        <img src="./img/kawauso.png" alt="" />
+                        <img src="./img/zou.png" alt="" />
+                        <img src="./img/conga.png" alt="" />
+                        <img src="./img/kame.png" alt="" />
+                        <img src="./img/food.png" alt="" />
+                        <li>
+                          ワクワク感を演出するため、ポップで親しみやすいイラストを制作し、イラストをクリックすると該当する説明へ移動できるようにしました。
+                        </li>
+                      </div>
+                      <div class="ingenuity ingenuity-2">
+                        <img src="./img/ingenuity-2.png" alt="" />
+                        <li>
+                          メニューバーとチケットページへの導線を常に表示し、チケット購入につながりやすい構成にしました。
+                        </li>
+                      </div>
+                      <div class="ingenuity ingenuity-3">
+                        <li>
+                          スマートフォン・タブレット・PCそれぞれで見やすいレイアウトになるよう、レスポンシブ対応を行いました。
+                        </li>
+                      </div>
+                      <div class="ingenuity ingenuity-4">
+                        <li>
+                          子どもから大人まで直感的に操作できるよう、デザインだけでなく使いやすさも意識して制作しました。
+                        </li>
+                      </div>
+                    </ul>
+                  </div>
+                  <div class="frame-back-content">
+                    <a
+                      href="https://kensyu.whitesnow.jp/kanako_ueba/delta-fes/index.html"
+                      target="_blank"
+                      rel="noopener"
+                      >作品ページ：「鴨川デルタどうぶつ日和」</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2.朝ラン -->
+            <div class="photo-frame work2">
+              <div class="frame-inner">
+                <!-- 表 -->
+                <div class="frame-front">
+                  <button type="button" class="photo-button" aria-label="作品2">
+                    <img src="./img/work2.png" alt="work#2" />
+
+                    <div class="work-caption">
+                      <div class="tags">
+                        <p>#illustrate</p>
+                      </div>
+                    </div>
+                  </button>
+
+                  <!-- フレーム下部 -->
+                  <div class="frame-info">
+                    <div class="view-text">
+                      Illustration<br />
+                      View →
+                    </div>
+                    <span>2024.04</span>
+                  </div>
+                </div>
+                <!-- 裏 -->
+                <div class="frame-back">
+                  <h3>鴨川デルタどうぶつ日和</h3>
+
+                  <p>子ども向けイベントサイトです。</p>
+
+                  <p>HTML / CSS / TypeScript</p>
+
+                  <a href="#">Site</a>
+                  <a href="#">GitHub</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3.チラシイラスト -->
+            <div class="photo-frame work3">
+              <div class="frame-inner">
+                <!-- 表 -->
+                <div class="frame-front">
+                  <button type="button" class="photo-button" aria-label="作品3">
+                    <img src="./img/work3.png" alt="work3" />
+
+                    <div class="work-caption">
+                      <div class="tags">
+                        <p>#illustrate</p>
+                        <p>#advertisement</p>
+                      </div>
+                    </div>
+                  </button>
+
+                  <!-- フレーム下部 -->
+                  <div class="frame-info">
+                    <div class="view-text">
+                      Illustration<br />
+                      View →
+                    </div>
+
+                    <span>2025.09</span>
+                  </div>
+                </div>
+
+                <!-- 裏 -->
+                <div class="frame-back">
+                  <h3>鴨川デルタどうぶつ日和</h3>
+
+                  <p>子ども向けイベントサイトです。</p>
+
+                  <p>HTML / CSS / TypeScript</p>
+
+                  <a href="#">Site</a>
+                  <a href="#">GitHub</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- ４.ポートフォリオ -->
+            <div class="photo-frame work4">
+              <div class="frame-inner">
+                <!-- 表 -->
+                <div class="frame-front">
+                  <button type="button" class="photo-button" aria-label="作品4">
+                    <img src="./img/work4.png" alt="work4" />
+
+                    <div class="work-caption">
+                      <div class="tags">
+                        <p>#Web</p>
+                        <p>#illustrate</p>
+                        <p>#Portfolio</p>
+                      </div>
+                    </div>
+                  </button>
+                  <!-- フレーム下部 -->
+                  <div class="frame-info">
+                    <div class="view-text">
+                      Web Design<br />
+                      View →
+                    </div>
+                    <span>2026.05</span>
+                  </div>
+                </div>
+                <!-- 裏 -->
+                <div class="frame-back">
+                  <h3>鴨川デルタどうぶつ日和</h3>
+
+                  <p>子ども向けイベントサイトです。</p>
+
+                  <p>HTML / CSS / TypeScript</p>
+
+                  <a href="#">Site</a>
+                  <a href="#">GitHub</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5.ロゴ -->
+            <div class="photo-frame work5">
+              <div class="frame-inner">
+                <!-- 表 -->
+                <div class="frame-front">
+                  <button type="button" class="photo-button" aria-label="作品5">
+                    <img src="./img/work5.png" alt="work5" />
+
+                    <div class="work-caption">
+                      <div class="tags">
+                        <p>#logo</p>
+                        <p>#design</p>
+                      </div>
+                    </div>
+                  </button>
+                  <!-- フレーム下部 -->
+                  <div class="frame-info">
+                    <div class="view-text">
+                      Logo Design<br />
+                      View →
+                    </div>
+
+                    <span>2026.06</span>
+                  </div>
+                </div>
+                <!-- 裏 -->
+                <div class="frame-back">
+                  <div class="frame-back-title">
+                    <h3>FLRM ロゴコンペ 提案作品</h3>
+                  </div>
+
+                  <div class="frame-back-overview">
+                    <h4>概要</h4>
+                    <div class="frame-back-content">
+                      <p>
+                        FLRMの企業理念をもとに、理念や企業の印象を視覚的に表現するロゴを制作しました。
+                        一つの方向性に絞るのではなく、モノグラム・折り紙・立体的な箱という異なるモチーフから3案を展開。
+                        シンプルな形状の中に意味を持たせ、長く使用できるロゴを意識してデザインしました。
+                      </p>
+                    </div>
+
+                    <h4>制作情報</h4>
+                    <div class="frame-back-content">
+                      <p>制作内容：ロゴデザイン</p>
+                      <p>使用ツール：Figma / Procreate</p>
+                      <p>作成時期：2026.06</p>
+                    </div>
+                  </div>
+
+                  <div class="frame-back-concept">
+                    <h4>コンセプト</h4>
+                    <div class="frame-back-content">
+                      <p>
+                        企業理念という目に見えないものを、
+                        シンプルな線と形の組み合わせによって、ひとつの印象的なシンボルへ落とし込むことを意識しました。
+                        全3案で共通して濃紺をベースに使用し、アクセントとしてオレンジを配置。
+                        落ち着きや信頼感の中に、前向きさや動きを感じられるデザインを目指しました。
+                        また、細かな装飾を加えるのではなく、
+                        線や余白そのものをデザインとして扱うことで、サイズを小さくしても認識しやすいロゴを意識しています。
+                      </p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4>案1</h4>
+                    <img src="" alt="">
+                    <p></p>
+                  </div>
+
+                  <a href="#">Site</a>
+                  <a href="#">GitHub</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6.バナーデザイン -->
+            <div class="photo-frame work6">
+              <div class="frame-inner">
+                <!-- 表 -->
+                <div class="frame-front">
+                  <button type="button" class="photo-button" aria-label="作品6">
+                    <img src="./img/work4.png" alt="work6" />
+
+                    <div class="work-caption">
+                      <div class="tags">
+                        <p>#advertisement</p>
+                        <p>#design</p>
+                      </div>
+                    </div>
+                  </button>
+                  <!-- フレーム下部 -->
+                  <div class="frame-info">
+                    <div class="view-text">
+                      Web Design<br />
+                      View →
+                    </div>
+
+                    <span>2026.07</span>
+                  </div>
+                </div>
+                <!-- 裏 -->
+                <div class="frame-back">
+                  <h3>鴨川デルタどうぶつ日和</h3>
+
+                  <p>子ども向けイベントサイトです。</p>
+
+                  <p>HTML / CSS / TypeScript</p>
+
+                  <a href="#">Site</a>
+                  <a href="#">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact-modal" class="panel hidden" aria-hidden="true">
+        <!-- 暗い背景（クリックで閉じる）-->
+        <div class="panel-overlay"></div>
+        <!-- 本体 -->
+        <div class="panel-content panel-contact">
+          <div class="panel-contact-inner">
+            <button type="button" id="contact-close" class="close-button" aria-label="閉じる">×</button>
+            <h2>CONTACT</h2>
+            <form action="https://api.web3forms.com/submit" method="post">
+              <input type="hidden" name="access_key" value="1478f025-47ff-43d3-9cc9-7ca0dc06f5b2" />
+              <!-- 名前 -->
+              <div class="contact-name">
+                <label for="name">お名前</label>
+                <input type="text" id="name" name="customer-name" placeholder="上 羽子" required />
+              </div>
+              <!-- メアド -->
+              <div class="contact-mail">
+                <label for="mail">メールアドレス</label>
+                <input type="email" id="mail" name="customer-mail" placeholder="uebako@design.com" required />
+                <!-- 送信後の遷移先 -->
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value="http://kensyu.whitesnow.jp/kanako_ueba/portfolio/thanks.html"
+                />
+                <!-- スパム対策 -->
+                <input type="checkbox" name="bot-check" class="hidden" />
+              </div>
+              <!-- 種別 -->
+              <div class="contact-inquiry-type">
+                <label for="inquiry-type">お問い合わせ種別</label>
+                <p>当てはまるものを選んでください（複数選択可）</p>
+                <div class="contact-checkbox">
+                  <div>
+                    <input type="checkbox" id="hp" name="inquiry-type[]" value="hp" />
+                    <label for="hp">HP</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="lp" name="inquiry_type[]" value="lp" />
+                    <label for="lp">LP</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="banner" name="inquiry_type[]" value="banner" />
+                    <label for="banner">バナー</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="logo" name="inquiry_type[]" value="logo" />
+                    <label for="logo">ロゴ</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="illustration" name="inquiry_type[]" value="illustration" />
+                    <label for="illustration">イラスト</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="other" name="inquiry_type[]" value="other" />
+                    <label for="other">その他</label>
+                  </div>
+                </div>
+              </div>
+              <!-- 本文 -->
+              <div class="contact-content">
+                <label for="content">ご相談内容</label>
+                <textarea name="contents" id="content" placeholder="ご相談内容を記入してください。" required></textarea>
+              </div>
+              <!-- ファイル -->
+              <div class="contact-file">
+                <label for="reference">参考URLや参考画像があれば添付してください。</label>
+                <input class="contact-url" type="url" id="my-url" name="website" placeholder="https://example.com" />
+                <input class="contact-img" type="file" id="upfile" name="upfile" />
+              </div>
+              <!-- 送信 -->
+              <div class="contact-submit">
+                <input type="submit" value="送信" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOPIC -->
+      <section id="topic-modal" class="panel hidden" aria-hidden="true">
+        <div class="panel-content panel-topic">
+          <button type="button" id="topic-close" class="close-button" aria-label="閉じる">×</button>
           <ul>
-            <li>HTML / CSS / TypeScript</li>
-            <li>Figma(Webデザイン)</li>
-            <li>Procreate(イラスト作成)</li>
+            <li class="new-topic">
+              <span>new</span><a href="#">2026/9/9<br />LPデザインを作品に追加しました</a>
+            </li>
+            <li>
+              <a href="#">2026/8/1<br />〇〇を更新しました</a>
+            </li>
+            <li>
+              <a href="#">2026/7/8<br />ロゴをデザインを作品に追加しました</a>
+            </li>
           </ul>
         </div>
-        <div class="profile-icon"><img src="./img/uebako.png" alt="アイコン" /></div>
-      </div>
-    </section>
+      </section>
 
-    <!-- WORKS -->
-    <section id="works-modal" class="panel hidden" aria-hidden="true">
-      <!-- 暗い背景（クリックで閉じる）-->
-      <div class="panel-overlay"></div>
-      <!-- 本体 -->
-      <div class="panel-content panel-works">
-        <div class="panel-works-inner">
-          <button type="button" id="works-close" class="close-button" aria-label="閉じる">×</button>
-          <button type="button" class="photo-flame work1" aria-label="作品1">
-            <img src="./img/work1.png" alt="work#1" />
-            <span>2025.11</span>
-          </button>
-          <button type="button" class="photo-flame work2" aria-label="作品2">
-            <img src="./img/work2.png" alt="work#2" />
-            <span>2024.04</span>
-          </button>
-          <button type="button" class="photo-flame work3" aria-label="作品3">
-            <img src="./img/work3.png" alt="work3" />
-            <span>2025.09</span>
-          </button>
+      <!-- cat-ore -->
+      <section id="cat-ore-modal" class="panel hidden" aria-hidden="true">
+        <!-- 暗い背景（クリックで閉じる）-->
+        <div class="panel-overlay"></div>
+        <div class="panel-cat-ore">
+          <div class="panel-cat-ore-inner">
+            <button type="button" id="cat-ore-close" class="close-button" aria-label="閉じる">×</button>
+            <img src="./img/photo-ore.png" alt="オレの写真" />
+            <div class="cat-tags">
+              <p>#オレ #♀</p>
+              <p id="ore-message"></p>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CONTACT -->
-    <section id="contact-modal" class="panel hidden" aria-hidden="true">
-      <!-- 暗い背景（クリックで閉じる）-->
-      <div class="panel-overlay"></div>
-      <!-- 本体 -->
-      <div class="panel-content">
-        <h2></h2>
-        <p>a</p>
-      </div>
-    </section>
+      <!-- cat-latte -->
+      <section id="cat-latte-modal" class="panel hidden" aria-hidden="true">
+        <!-- 暗い背景（クリックで閉じる）-->
+        <div class="panel-overlay"></div>
+        <div class="panel-cat-latte">
+          <div class="panel-cat-latte-inner">
+            <button type="button" id="cat-latte-close" class="close-button" aria-label="閉じる">×</button>
+            <img src="./img/photo-latte.png" alt="ラテの写真" />
+            <div class="cat-tags">
+              <p>#ラテ #♂</p>
+              <p id="latte-message"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- menu -->
+      <section id="menu-modal" class="panel hidden" aria-hidden="true">
+        <!-- 暗い背景（クリックで閉じる）-->
+        <div class="panel-overlay"></div>
+        <div class="panel-menu">
+          <button type="button" id="menu-close" class="close-button" aria-label="閉じる">×</button>
+          <img src="./img/menu.png" alt="menu" />
+          <div class="menu-list">
+            <div class="main-menu">
+              <ul>
+                <li>
+                  <a href="#" data-open="profile-open">UEBAKOについて</a>
+                </li>
+                <li>
+                  <a href="#" data-open="works-open">作品集</a>
+                </li>
+                <li>
+                  <a href="#" data-open="contact-open">お問い合わせ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="sub-menu">
+              <ul>
+                <li>
+                  <a href="#" data-open="topic-open">最新情報</a>
+                </li>
+                <li>
+                  <a href="#" data-open="likes-open">好きなもの</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- likes -->
+      <section id="likes-modal" class="panel hidden" aria-hidden="true">
+        <!-- 暗い背景（クリックで閉じる）-->
+        <div class="panel-overlay"></div>
+        <div class="panel-likes">
+          <button type="button" id="likes-close" class="close-button" aria-label="閉じる">×</button>
+          <h2>LIKES</h2>
+          <!-- 好きなものボタン（前半） -->
+          <div class="likes-grid">
+            <button type="button" class="likes-button" data-likes="nails" aria-label="ネイルについて見る">
+              <img src="./img/likes-nails.png" alt="nails" />
+            </button>
+
+            <button type="button" class="likes-button" data-likes="cats" aria-label="ねこについて見る">
+              <img src="./img/likes-cat.png" alt="cats" />
+            </button>
+
+            <button type="button" class="likes-button" data-likes="drawing" aria-label="絵描きについて見る">
+              <img src="./img/likes-drawing.png" alt="drawing" />
+            </button>
+
+            <!-- チケット -->
+            <div id="like-ticket" class="ticket hidden">
+              <img id="ticket-left" src="" alt="" />
+
+              <div class="ticket-text">
+                <h3 id="ticket-title"></h3>
+                <p id="ticket-description"></p>
+              </div>
+
+              <img id="ticket-right" src="" alt="" />
+            </div>
+            <!-- 好きなものボタン（後半） -->
+            <button type="button" class="likes-button" data-likes="bagel" aria-label="ベーグルについて見る">
+              <img src="./img/likes-bagel.png" alt="bagel" />
+            </button>
+
+            <button type="button" class="likes-button" data-likes="coffee" aria-label="コーヒーについて見る">
+              <img src="./img/likes-coffee.png" alt="coffee" />
+            </button>
+
+            <button type="button" class="likes-button" data-likes="music" aria-label="音楽について見る">
+              <img src="./img/likes-music.png" alt="music" />
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script type="module" src="./src/main.ts"></script>
   </body>
